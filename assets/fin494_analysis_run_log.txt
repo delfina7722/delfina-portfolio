@@ -1,0 +1,63 @@
+Mode: live
+Analyzed: 2026-11-18 21:41:21 UTC
+Snapshot: 2025-12-31
+Shared session range: 2025-12-03 through 2025-12-31
+Valid-day minimum: 15
+Rows in source daily extraction: 213171
+Rows outside the shared session window: 0
+
+Universe comparison (medians use observed denominators):
+                   screen security_count company_count_known
+           broad_download          10756                6235
+            baseline_size           1753                1735
+ final_size_and_liquidity           1733                1722
+ missing_company_count cap_observed_n cap_median_m
+                     0          10742     260.2511
+                     0           1753    5324.4758
+                     0           1733    5416.3957
+ insufficient_daily_coverage_n liquidity_observed_n adv20_m_median
+                           179                10577        2.00559
+                            15                 1738       68.45720
+                             0                 1733       68.81357
+ raw_liquidity_observed_n raw_avg_dollar_volume_m_median
+                    10735                       1.978033
+                     1753                      67.976844
+                     1733                      68.813574
+
+Join audit:
+                        metric value
+           monthly_rows_before 10756
+            monthly_rows_after 10756
+       monthly_keys_duplicated     0
+     liquidity_keys_duplicated     0
+    monthly_with_daily_summary 10750
+ monthly_without_daily_summary     6
+  monthly_with_zero_valid_days    21
+ daily_summary_without_monthly     0
+       monthly_order_preserved     1
+
+Mean of positive finite CIZ daily price times nonnegative finite daily share volume / 1e6 on shared market sessions; missing or invalid days excluded; zero volume retained.
+avg_dollar_volume_m is retained at any positive coverage; adv20_m is missing below min_valid_days.
+
+R version 4.5.1 (2025-06-13 ucrt)
+Platform: x86_64-w64-mingw32/x64
+Running under: Windows 11 x64 (build 26200)
+
+Matrix products: default
+  LAPACK version 3.12.1
+
+locale:
+[1] LC_COLLATE=English_United States.utf8 
+[2] LC_CTYPE=English_United States.utf8   
+[3] LC_MONETARY=English_United States.utf8
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.utf8    
+
+time zone: America/Chicago
+tzcode source: internal
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+[1] compiler_4.5.1 tools_4.5.1   
